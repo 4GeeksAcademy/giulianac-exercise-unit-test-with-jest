@@ -1,5 +1,5 @@
-// import the function sum from the app.js file
-const { sum } = require('./app.js');
+// import the functions from the app.js file
+const { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound } = require('./app.js');
 
 // start your first test
 test('adds 14 + 9 to equal 23', () => {
@@ -12,8 +12,6 @@ test('adds 14 + 9 to equal 23', () => {
 
 
 test("One euro should be 1.206 dollars", function(){
-    //import the function from app.js
-    const { fromEuroToDollar } = require('./app.js')
 
     // use the function like its suppoed to be used
     const dollars = fromEuroToDollar(3.5)
@@ -27,10 +25,10 @@ test("One euro should be 1.206 dollars", function(){
 
 test("One dollar should be 106.58 yens", function(){
     //import the function from app.js
-    const { fromDollarToYen } = require('./app.js')
+    // const { fromDollarToYen } = require('./app.js')
 
     // use the function like its suppoed to be used
-    const dollars = fromDollarToYen(3)
+    const yens = fromDollarToYen(3)
 
     // if 1 dollar is 106.58 yens, then 3 dollars should be (3 * 106.58)
     const expected = 3 * 106.58; 
@@ -41,10 +39,10 @@ test("One dollar should be 106.58 yens", function(){
 
 test("One yen should be 0.0063 pounds", function(){
     //import the function from app.js
-    const { fromYenToPound } = require('./app.js')
+    // const { fromYenToPound } = require('./app.js')
 
     // use the function like its supposed to be used
-    const dollars = fromYenToPound(30)
+    const pounds = fromYenToPound(30)
 
     // if 1 yen is 0.0063 pounds, then 30 yens should be (30 * 0.0063)
     const expected = 30 * 0.0063; 
